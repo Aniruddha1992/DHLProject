@@ -1,0 +1,21 @@
+.marginZeroRow{
+    margin:0px;
+    text-align: center;
+    .searchBoxDataset{
+        position: relative;
+        input{
+            padding: 8px 15px;
+            border-radius: 15px;
+            border: 1px solid #00BCEB;
+            width:100%;
+        }
+        .link{
+            position: absolute;
+            right: 10px;
+            top: 8px;
+        }
+    }
+}
+mat-grid-tile{
+    background-color: lightblue;
+}
