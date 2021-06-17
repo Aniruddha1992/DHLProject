@@ -1,0 +1,33 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div style="margin: 2rem;">
+<div class="col-1" style="text-align: center">
+    <div class="searchBoxDataset">
+        <span>Enter your search : </span>
+        <input id="input-search" type="search" placeholder="Search" [(ngModel)]='searchStr'>
+        <button type="button" class="link">
+            <span class="material-icons" style="font-size: 15px" (click)="onSearch(searchStr)">search</span>
+        </button>
+        <div *ngIf="errorMsg" class="text-danger">
+            <div>{{errorMsg}}</div>
+        </div>
+    </div>
+</div>
+
+<select style="padding: auto; margin-bottom: 1rem;" [(ngModel)]="selectedGroupBy" (change)="resetDataCardView()">
+    <option *ngFor='let option of groupByOptions' [ngValue]="option">{{option.key}}</option>
+</select>
+
+<div class="col-3">
+    <mat-grid-list cols="3" rowHight="2:1" gutterSize="10px">
+        <div *ngFor='let data of cardDataToDisplay'>
+            <mat-grid-tile class='customLabel'>
+                <div>Type: {{ data.type }}</div>
+                <div style="padding-left: 2rem;"> Name: {{ data.name }}</div>
+
+            </mat-grid-tile>
+        </div>
+    </mat-grid-list>
+</div>
+</div>
