@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
+// { ShowDashboardModule } from './show-dashboard/show-dashboard.module';
+import { ShowDashboardsComponent } from './show-dashboards/show-dashboards.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowDashboardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+   // ShowDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

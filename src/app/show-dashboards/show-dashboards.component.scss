@@ -1,0 +1,38 @@
+.marginZeroRow{
+    margin:0px;
+    text-align: center;
+    .searchBoxDataset{
+        position: relative;
+        input{
+            padding: 8px 15px;
+            border-radius: 15px;
+            border: 1px solid #00BCEB;
+            width:100%;
+        }
+        .link{
+            position: absolute;
+            right: 10px;
+            top: 8px;
+        }
+    }
+}
+mat-grid-tile{
+    background-color: lightblue;
+}
+
+.customLabel {
+    width: 300px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid black;
+    overflow: hidden;
+  }
+  .customLabel>div {
+    background: #f0ad4e;
+    margin-bottom: 5px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    float: right;
+    clear: both;
+  }
